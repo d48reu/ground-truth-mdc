@@ -1,8 +1,11 @@
 import os
 import requests
+from dotenv import load_dotenv
 from flask import Flask, render_template, request, jsonify
 from risk_engine import build_risk_profile
 from translator import get_risk_summary
+
+load_dotenv()
 
 app = Flask(__name__)
 
